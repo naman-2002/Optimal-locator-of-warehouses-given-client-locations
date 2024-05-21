@@ -10,4 +10,4 @@ gunicorn
 flask_cors
 scipy
 numpy
-sklearn
+scikit-learn
