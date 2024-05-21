@@ -6,7 +6,7 @@ CORS(aWeb_1)
 
 points = []  # Initialize an empty list to store points
 
-@aWeb_1.route('/process_points', methods=['POST'])
+@aWeb_1.route('/process_points', methods=['GET'])
 def process_points():
     data = request.json  # Get the JSON data from the request
     received_points = data.get('points', [])  # Extract the 'points' array from the JSON data
