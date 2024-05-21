@@ -8,3 +8,6 @@ MarkupSafe==2.1.5
 Werkzeug==3.0.3
 gunicorn
 flask_cors
+scipy
+numpy
+sklearn
