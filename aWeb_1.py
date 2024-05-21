@@ -1,12 +1,12 @@
 from flask import Flask, request
 from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app)
+aWeb_1 = Flask(__name__)
+CORS(aWeb_1)
 
 points = []  # Initialize an empty list to store points
 
-@app.route('/process_points', methods=['POST'])
+@aWeb_1.route('/process_points', methods=['POST'])
 def process_points():
     data = request.json  # Get the JSON data from the request
     received_points = data.get('points', [])  # Extract the 'points' array from the JSON data
@@ -216,4 +216,4 @@ def process_points():
     return (g)
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Run the Flask app in debug mode
+    aWeb_1.run(debug=True)  # Run the Flask app in debug mode
