@@ -12,9 +12,18 @@ points = []  # Initialize an empty list to store points
 
 @aWeb_1.route('/process_points', methods=['POST'])
 def process_points():
+    print("Received a request on /process_points")
     data = request.json  # Get the JSON data from the request
+    if data is None:
+        print("No JSON data received")
+        return jsonify({"error": "No JSON data received"}), 400
+
     received_points = data.get('points', [])  # Extract the 'points' array from the JSON data
     p_value = data.get('p')
+    if not received_points or p_value is None:
+        print("Missing 'points' or 'p' in the request")
+        return jsonify({"error": "Missing 'points' or 'p' in the request"}), 400
+
     points.extend(received_points)  # Add received points to the global 'points' list
     M = received_points
     m = len(M)
