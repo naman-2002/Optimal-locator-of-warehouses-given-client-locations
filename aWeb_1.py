@@ -216,4 +216,4 @@ def process_points():
     return (g)
 
 if __name__ == '__main__':
-    aWeb_1.run(debug=True)  # Run the Flask app in debug mode
+    aWeb_1.run(host='0.0.0.0', port=8000)  # Run the Flask app in debug mode
