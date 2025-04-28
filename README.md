@@ -1,4 +1,4 @@
-# optimal locator of warehouse given client locations
+# Optimal locator of warehouse given client locations
 
 I'm excited to share my latest project: Optimal locator of warehouse given client locations
 I have developed a website where you can input the coordinates of your clients in the shown map and provide the no. of needed storehouse/warehouse, and it will provide you with the optimized location for the storehouses.
